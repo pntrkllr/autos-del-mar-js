@@ -1,0 +1,151 @@
+.mini {
+    height: 42px;
+    width: 32px;
+}
+
+.login {
+    width: 400px;
+    height: 255px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.barra-lateral {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: white;
+    margin-left: 30px;
+}
+
+.wrap {
+    margin: auto;
+}
+
+.registro {
+    width: 400px;
+    height: 455px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.body-bg {
+    background-image: url(/assets/img/fondo.jpg);
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.tamano {
+    height: 585px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.bordes {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.barra {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentacion {
+    margin-top: 1rem;
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+/* Carrusel Autos */
+.tamano2 {
+    height: 400px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+/* Imágenes de los productos*/
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+/*footer*/
+.content {
+    min-height: calc(100vh - 250px);
+    /* Altura del viewport menos la altura del footer */
+}
+
+.content-prod {
+    min-height: calc(100vh - 50px);
+}
+
+.footer {
+    height: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* página de los autos */
+.autos-cards {
+    width: 80%;
+}
+
+.autos {
+    flex-direction: row;
+}
+
+.filtro {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 20%;
+    height: 500px;
+    margin-right: 2rem;
+}
+
+/* media querys */
+@media (max-width: 768px) {
+    .autos {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .filtro {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .autos-cards {
+        width: 100%;
+    }
+
+    .ficha-auto {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 1rem;
+        max-width: 700px;
+    }
+
+    .presentacion img {
+        width: 100%;
+    }
+
+    .tab-content {
+        width: 70%;
+    }
+}
