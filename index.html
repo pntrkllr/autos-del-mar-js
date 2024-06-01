@@ -31,18 +31,41 @@
             </li>
           </ul>
 
-          <!--Vinculo para carrito de compras y login-->
-          <li class="d-flex">
-            <a href="#" style="margin-right: 15px">
-              <i class="bi bi-cart-dash-fill text-danger" style="font-size: 30px"></i>
-            </a>
-            <a class="mt-1" href="./indexLogin.html">
-              <button type="button" class="btn btn-outline-light" style="margin-right: 12px">Acceder</button>
-            </a>
-            <a class="mt-1" href="./indexRegistro.html">
-              <button type="button" class="btn btn-outline-light">Regístrate</button>
-            </a>
-          </li>
+          <!--Carrito de compras y login-->
+          <div class="container-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+              class="bi bi-cart-fill text-danger me-4" viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+            <span class="text">Carrito de compras</span>
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+            <div class="container-cart-products hidden-cart">
+              <div class="cart-product">
+                <div class="info-cart-product">
+                  <span class="cantidad-producto-carrito"></span>
+                  <p class="titulo-producto-carrito">*Vehículo*</p>
+                  <span class="precio-producto-carrito">*Precio*</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-x icon-close" viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </div>
+              <div class="cart-total">
+                <h3>Total:</h3>
+                <span class="total-pagar">*total*</span>
+              </div>
+            </div>
+          </div>
+
+          <!--Login-->
+          <a class="mt-1" href="./indexLogin.html">
+            <button type="button" class="btn btn-outline-light" style="margin-right: 10px">Acceder</button>
+          </a>
         </div>
       </div>
     </nav>
@@ -60,12 +83,12 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="border-radius: 10px;">
         <div class="carousel-item active">
           <a href="#">
             <img src="./assets/img/nissan-gta-r35.jpeg" class="tamano" alt="nissan gtr r35">
           </a>
-          <div class="carousel-caption d-flex row">
+          <div class="carousel-caption d-flex row" style="background-color: rgba(0, 0, 0, 0.5);">
             <h5>Nissan GTR R35</h5>
             <p>El deportivo japonés fue uno de los centros de atención del Tokyo Motor Show y no es para menos dado el
               potencial que esconde bajo el capó.</p>
@@ -75,7 +98,7 @@
           <a href="#">
             <img src="./assets/img/jaguar-f-type.jpg" class="tamano" alt="Jaguar F-Type">
           </a>
-          <div class="carousel-caption d-flex row">
+          <div class="carousel-caption d-flex row" style="background-color: rgba(0, 0, 0, 0.5);">
             <h5>Jaguar F-Type</h5>
             <p>El diseño del F-TYPE es inconfundiblemente Jaguar: atlético, estilizado y elegante en todos sus ángulos.
             </p>
@@ -85,7 +108,7 @@
           <a href="#">
             <img src="./assets/img/koenigsegg.jpg" class="tamano" alt="Koenigsegg agera R">
           </a>
-          <div class="carousel-caption d-flex row">
+          <div class="carousel-caption d-flex row" style="background-color: rgba(0, 0, 0, 0.5);">
             <h5>Koenigsegg Agera R</h5>
             <p>El Koenigsegg Agera es un superdeportivo biplaza sueco capaz de alcanzar en su versión más potente 1.155
               caballos.</p>
@@ -152,6 +175,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script type="module" src="./assets/js/index.js"></script>
 </body>
 
 </html>

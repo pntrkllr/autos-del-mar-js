@@ -50,7 +50,6 @@ const crearCards = ( vehiculos = [] ) => {
         divCol.classList.add("col-md-3");
         divCol.classList.add("col-sm-12");
         divCol.classList.add("col-xs-12");
-        divCol.classList.add("mt-2");
         divCol.classList.add("mb-2");
 
         const card = document.createElement("div");
@@ -66,15 +65,17 @@ const crearCards = ( vehiculos = [] ) => {
 
         const title = document.createElement("h5");
         title.classList.add("text-title");
-        title.textContent = `Marca : ${marca}`;
+        title.textContent = `Marca: ${marca}`;
 
         const subTitle = document.createElement("p");
         subTitle.classList.add("text-title");
-        subTitle.textContent = `Modelo : ${modelo}`;
+        subTitle.textContent = `Modelo: ${modelo}`;
 
         const subTitle2 = document.createElement("p");
         subTitle2.classList.add("text-title");
-        subTitle2.textContent = `Precio : ${precio}`;
+        subTitle2.classList.add("text-center");
+        subTitle2.classList.add("fs-4");
+        subTitle2.textContent = `$${precio}`;
 
         const btnVer = document.createElement("button");
         btnVer.classList.add("btn","btn-success");
@@ -95,8 +96,8 @@ const crearCards = ( vehiculos = [] ) => {
 
         vehiculosRow.appendChild(divCol);
     })
-}
+};
+
 getVehiculos()
     .then( data => crearCards(data))
     .catch( error => console.log(`El error es: ${error}`))
-

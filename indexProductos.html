@@ -33,24 +33,48 @@
                         </li>
                     </ul>
 
-                    <!--Vinculo para carrito de compras y login-->
-                    <li class="d-flex">
-                        <a href="#" style="margin-right: 15px">
-                            <i class="bi bi-cart-dash-fill text-danger" style="font-size: 30px"></i>
-                        </a>
-                        <a class="mt-1" href="./indexLogin.html">
-                            <button type="button" class="btn btn-outline-light"
-                                style="margin-right: 12px">Acceder</button>
-                        </a>
-                        <a class="mt-1" href="./indexRegistro.html">
-                            <button type="button" class="btn btn-outline-light">Regístrate</button>
-                        </a>
-                    </li>
+                    <!--Carrito de compras y login-->
+                    <div class="container-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-cart-fill text-danger me-4" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                        </svg>
+                        <span class="text">Carrito de compras</span>
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                        <div class="container-cart-products hidden-cart">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito"></span>
+                                    <p class="titulo-producto-carrito">*Vehículo*</p>
+                                    <span class="precio-producto-carrito">*Precio*</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-x icon-close" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </div>
+                            <div class="cart-total">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">*total*</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Login-->
+                    <a class="mt-1" href="./indexLogin.html">
+                        <button type="button" class="btn btn-outline-light" style="margin-right: 10px">Acceder</button>
+                    </a>
+
                 </div>
             </div>
         </nav>
+
         <main class="container-fluid mt-1 p-4 d-flex autos">
-            <aside class="filtro p-3">
+            <aside class="filtro p-3 mb-2">
                 <!--filtros de la izquierda-->
                 <form>
                     <div class="mb-3">
@@ -63,7 +87,7 @@
                             <option value="3">BMW</option>
                             <option value="4">Chevrolet Corvette</option>
                             <option value="5">Ferrari</option>
-                            <option value="6">Ford</option>
+                            <option value="6">Ford Mustang</option>
                             <option value="7">Lotus</option>
                             <option value="8">McLaren</option>
                             <option value="9">Lamborghini</option>
