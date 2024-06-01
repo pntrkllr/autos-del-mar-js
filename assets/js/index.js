@@ -99,3 +99,4 @@ const crearCards = ( vehiculos = [] ) => {
 getVehiculos()
     .then( data => crearCards(data))
     .catch( error => console.log(`El error es: ${error}`))
+
