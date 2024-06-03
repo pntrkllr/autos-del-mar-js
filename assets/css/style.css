@@ -85,7 +85,6 @@ html {
 /*footer*/
 .content {
     min-height: calc(100vh - 250px);
-    /* Altura del viewport menos la altura del footer */
 }
 
 .content-prod {

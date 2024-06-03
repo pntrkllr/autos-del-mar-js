@@ -18,16 +18,16 @@ const enviarDatos = (id , marca , imagen , descripcion, modelo , precio) => {
             imagePage.classList.add("card-img-top");
 
             const titlePage = doc.getElementById("titlePage");
-            titlePage.textContent = `Marca : ${marca}`;
+            titlePage.textContent = `Marca: ${marca}`;
 
             const subTitlePage = doc.getElementById("subTitlePage");
-            subTitlePage.textContent = `Descripcion : ${descripcion}`;
+            subTitlePage.textContent = `Descripcion: ${descripcion}`;
 
             const subTitlePage2 = doc.getElementById("subTitlePage2");
-            subTitlePage2.textContent = `modelo : ${modelo}`;
+            subTitlePage2.textContent = `Modelo: ${modelo}`;
 
             const subTitlePage3 = doc.getElementById("subTitlePage3");
-            subTitlePage3.textContent = `precio : ${precio}`;
+            subTitlePage3.textContent = `Precio: ${precio}`;
 
             const nuevoHTML = new XMLSerializer().serializeToString(doc);
 
@@ -101,3 +101,12 @@ const crearCards = ( vehiculos = [] ) => {
 getVehiculos()
     .then( data => crearCards(data))
     .catch( error => console.log(`El error es: ${error}`))
+
+
+// muestra y oculta el carrito de compras :v
+const btnCarrito = document.querySelector('.container-icon');
+const containerCartProducts = document.querySelector('.container-cart-products')
+
+btnCarrito.addEventListener('click', ()=> {
+    containerCartProducts.classList.toggle('hidden-cart');
+})
