@@ -16,11 +16,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             window.location.href = 'index.html';
         } else {
 
-            document.getElementById('loginMessage').textContent = 'Nombre de usuario y/o contraseña incorrectos. Inténtelo de nuevo.';
+            document.getElementById('loginMessage').textContent = 'Nombre de usuario y/o contraseña incorrectos. Pruebe otra vez.';
         }
     } catch (error) {
 
-        document.getElementById('loginMessage').textContent = 'Ocurrió un error. Inténtelo de nuevo más tarde.';
+        document.getElementById('loginMessage').textContent = 'Error. Inténtelo de nuevo más tarde.';
     }
     
 });
