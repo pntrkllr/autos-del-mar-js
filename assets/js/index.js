@@ -1,6 +1,6 @@
 import { getVehiculos } from "./peticiones/getVehiculos.js";
 
-const enviarDatos = (id , marca , imagen , descripcion, modelo , precio) => {
+const enviarDatos = (id , marca , imagen , descripcion, modelo , precio, stock) => {
 
     const archivoHTML = "./Vehiculos.html";
 
@@ -27,7 +27,10 @@ const enviarDatos = (id , marca , imagen , descripcion, modelo , precio) => {
             subTitlePage2.textContent = `Modelo: ${modelo}`;
 
             const subTitlePage3 = doc.getElementById("subTitlePage3");
-            subTitlePage3.textContent = `Precio: ${precio}`;
+            subTitlePage3.textContent = `Stock: ${stock}`;
+
+            const subTitlePage4 = doc.getElementById("subTitlePage4");
+            subTitlePage4.textContent = `Precio: ${precio}`;
 
             const nuevoHTML = new XMLSerializer().serializeToString(doc);
 
@@ -42,7 +45,7 @@ const crearCards = ( vehiculos = [] ) => {
     let vehiculosRow = document.getElementById("vehiculosRow");
 
     vehiculos.map((vehiculo) => {
-        const { id , marca , imagen , descripcion, modelo , precio} = vehiculo;
+        const { id , marca , imagen , descripcion, modelo , precio, stock} = vehiculo;
 
         const divCol = document.createElement("div");
         divCol.classList.add("col-xl-3");
@@ -73,15 +76,19 @@ const crearCards = ( vehiculos = [] ) => {
 
         const subTitle2 = document.createElement("p");
         subTitle2.classList.add("text-title");
-        subTitle2.classList.add("text-center");
-        subTitle2.classList.add("fs-4");
-        subTitle2.textContent = `$${precio}`;
+        subTitle2.textContent = `Stock: ${stock}`;
+
+        const subTitle3 = document.createElement("p");
+        subTitle3.classList.add("text-title");
+        subTitle3.classList.add("text-center");
+        subTitle3.classList.add("fs-4");
+        subTitle3.textContent = `$${precio}`;
 
         const btnVer = document.createElement("button");
         btnVer.classList.add("btn","btn-success");
         btnVer.textContent = "Ver más";
         btnVer.addEventListener("click", ()=> {
-            enviarDatos(id , marca , imagen , descripcion , modelo , precio);
+            enviarDatos(id , marca , imagen , descripcion , modelo , precio, stock);
         });
 
         divCol.appendChild(card);
@@ -92,6 +99,7 @@ const crearCards = ( vehiculos = [] ) => {
         divBody.appendChild(title);
         divBody.appendChild(subTitle);
         divBody.appendChild(subTitle2);
+        divBody.appendChild(subTitle3);
         divBody.appendChild(btnVer);
 
         vehiculosRow.appendChild(divCol);
